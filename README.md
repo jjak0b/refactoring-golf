@@ -1,5 +1,8 @@
+[![Run on Repl.it](https://repl.it/badge/github/piffy/refactoring-golf)](https://repl.it/github/piffy/refactoring-golf)
+
 # Refactoring Golf
 `https://github.com/sf105/refactoring-golf`
+
 
 _Refactoring Golf_ is a game designed to stretch your refactoring muscles and 
 to get you to explore your IDE to see what's really possible using 
