@@ -1,1 +1,0 @@
-`BustaPaga` sa troppo sul calcolo delle tasse
