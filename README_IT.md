@@ -56,7 +56,12 @@ manualmente e potrebbero essere necessari aggiustamenti
 - L'esercizio è stato adattato per essere usato online tramite Repl.it. Importate questo repo in Repl.it e tutto 
 dovrebbe funzionare. 
 - Lanciando il main si lanciano i test della buca 1. Per cambiare buca basta modificare il parametro 
-passato a TestRunnen, nel medoto Main.
+passato a TestRunnen, nel metodo Main.
+- Se non dovesse funzionare, una metodologia alternativa è la seguente
+ -- Creare un nuovo Repl basato su Java.
+ -- Copia e incollare il metodo Main.
+ -- Uploadare gli altri file. 
+ 
 
 ## Esempio di punteggi
 Ecco qualche esempio di punteggio, ottenuto tramite IntelliJ.  
