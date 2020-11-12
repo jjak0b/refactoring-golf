@@ -7,10 +7,14 @@ public class BustaPaga {
         this.imponibile = imponibile;
     }
 
-    public double getNetto() {
+    public double getTasse() {
         final double primoScaglione = Math.max(Math.min(imponibile, 20000.0) - 5000, 0.0);
         final double secondoScaglione = Math.max(Math.min(imponibile, 40000) - 20000, 0.0);
         final double terzoScaglione = Math.max(imponibile - 40000, 0.0);
-        return imponibile - (primoScaglione * 0.1 + secondoScaglione * 0.2 + terzoScaglione * 0.4);
+        return (primoScaglione * 0.1 + secondoScaglione * 0.2 + terzoScaglione * 0.4);
+    }
+
+    public double getNetto() {
+        return imponibile - this.getTasse();
     }
 }
