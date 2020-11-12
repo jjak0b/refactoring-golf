@@ -7,34 +7,32 @@ import static org.junit.Assert.assertEquals;
 public class BustaPagaTest04 {
     @Test
     public void tasseZeroSeImponibileInferioreAlPrimoScaglione() {
-        BustaPaga bustaPaga = new BustaPaga(5000, new CalcolatoreTasse());
-        assertEquals(5000, bustaPaga.getNetto(), 1e-6);
+        assertNettoDatoLordo(5000, 5000);
+    }
+
+    public void assertNettoDatoLordo(int i, int i2) {
+        BustaPaga bustaPaga = new BustaPaga(i, new CalcolatoreTasse());
+        assertEquals(i2, bustaPaga.getNetto(), 1e-6);
     }
 
     @Test
     public void tasseDelPrimoScaglioneEsclusoZonaEsentasse() {
-        final BustaPaga bustaPaga = new BustaPaga(10000, new CalcolatoreTasse());
-        assertEquals(9500, bustaPaga.getNetto(), 1e-6);
+        assertNettoDatoLordo(10000, 9500);
 
-        final BustaPaga bustaPaga2 = new BustaPaga(20000, new CalcolatoreTasse());
-        assertEquals(18500, bustaPaga2.getNetto(), 1e-6);
+        assertNettoDatoLordo(20000, 18500);
     }
 
     @Test
     public void tasseDelSecondoScaglioneComeSommaDelleTasseDelPrimoScaglioneEDelSecondoScaglione() {
-        final BustaPaga bustaPaga = new BustaPaga(25000, new CalcolatoreTasse());
-        assertEquals(22500, bustaPaga.getNetto(), 1e-6);
+        assertNettoDatoLordo(25000, 22500);
 
-        final BustaPaga bustaPaga2 = new BustaPaga(40000, new CalcolatoreTasse());
-        assertEquals(34500, bustaPaga2.getNetto(), 1e-6);
+        assertNettoDatoLordo(40000, 34500);
     }
 
     @Test
     public void tasseDelTerzoScaglioneComeSommaDelleTasseDiTuttiGliScaglioni() {
-        final BustaPaga bustaPaga = new BustaPaga(50000, new CalcolatoreTasse());
-        assertEquals(40500, bustaPaga.getNetto(), 1e-6);
+        assertNettoDatoLordo(50000, 40500);
 
-        final BustaPaga bustaPaga2 = new BustaPaga(60000, new CalcolatoreTasse());
-        assertEquals(46500, bustaPaga2.getNetto(), 1e-6);
+        assertNettoDatoLordo(60000, 46500);
     }
 }
